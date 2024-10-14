@@ -1,0 +1,419 @@
+/* styles.css */
+
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(36, 35, 35);
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #01142a; /* Azul marino */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    background-image: url("../assets/logo.png");
+    
+    background-size: cover; /* La imagen cubre todo el área del div */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; 
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color:#22B14C;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Menú hamburguesa para dispositivos móviles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color:#22B14C;
+    margin: 3px 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {                             /*version mobil*/
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #01142a;
+        flex-direction: column;
+        align-items: center; /* Centra los enlaces horizontalmente */
+        justify-content: center; /* Centra los enlaces verticalmente */
+        width: 100%; /* Ocupa todo el ancho */
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease-in-out;
+    }
+
+    .nav-links.open {
+        height: 200px; /* Ajusta la altura para mostrar el menú completo */
+    }
+
+    .nav-links li {
+        margin: 15px 0; /* Espaciado entre los enlaces */
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+    .about-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-parrafo{
+        color: #22B14C;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .form-container {
+        width: 90%; /* Mantiene el formulario centrado y con buen espacio en móviles */
+        padding: 15px;
+    }
+
+    .products-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .products-hijo{
+        width: 100%;
+        height: auto;
+      
+    }
+    .products-hijo2{
+        width: 100%;
+        height: 100vh;
+      
+    }
+
+    .product-parrafo{
+        color: #22B14C;
+        text-align: center;
+        
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+    }
+
+    .dragonimg{
+        background-image: url('../assets/dragonlava.png'); /* Reemplaza esta URL con la ruta de tu imagen */
+        height: 100%;
+        width: 100%;
+         /* Ocupa el 100% de la altura de la ventana */
+        background-size: cover; /* La imagen cubre todo el área del div */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat;
+    }
+
+}
+
+@media screen and (min-width: 768px) {                         /*version escritorio*/
+
+    .about-parrafo{
+        color: #22B14C;
+        text-align: justify;
+        padding-right: 5rem;
+    }
+
+    .products-container{
+        display: flex;
+    }
+
+    .products-hijo{
+        width: 50%;
+        height: 120vh;
+        display: flex;
+        align-items: center;
+    }
+    .products-hijo2{
+        width: 50%;
+        height: 120vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .product-parrafo{
+        color: #22B14C;
+        text-align: justify;
+        padding-left: 5rem;
+        margin-top: 5rem;
+    }
+
+    .dragonimg{
+        background-image: url('../assets/dragonlava.png'); /* Reemplaza esta URL con la ruta de tu imagen */
+        height: 100%;
+        width: 100%;
+         /* Ocupa el 100% de la altura de la ventana */
+        background-size: cover; /* La imagen cubre todo el área del div */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat;
+    }
+}
+
+.hero-image {
+    background-image: url('../assets/heroimage.png'); /* Reemplaza esta URL con la ruta de tu imagen */
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    background-size: cover; /* La imagen cubre todo el área del div */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+/* Estilo del texto superpuesto en la hero image */
+.hero-text {
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente para mejor visibilidad */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #22B14C;
+}
+
+.hero-text p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #22B14C;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    background-color: #22B14C; /* Color del botón */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #3fff78; /* Color del botón al pasar el mouse */
+}
+
+.about{
+    color: #22B14C;
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem;
+    padding-top: 100px;
+    
+}
+
+
+.about-container{
+    display: flex;
+
+}
+
+.about-hijo{
+    width: 50%;
+}
+
+.imglogo{
+    background-image: url('../assets/logo.png'); /* Reemplaza esta URL con la ruta de tu imagen */
+    height: 150px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto; /* Ocupa el 100% de la altura de la ventana */
+    background-size: cover; /* La imagen cubre todo el área del div */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+}
+.products-title{
+
+    color: #22B14C;
+    text-align: center;
+    font-size: 3rem;
+   
+    padding-top: 60px;
+}
+
+
+.padre-carousel{
+    background-color: #f0f0f0;
+}
+.contenedor-carousel{
+    margin: 0; /* Eliminar márgenes por defecto */
+    display: flex;
+    justify-content: center; /* Centrar el carrusel horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Ocupa todo el alto de la vista */
+    background-color: #f0f0f0; /* Fondo claro para mejorar la visibilidad */
+}
+
+.carousel {
+    position: relative;
+    width: 60vw; /* Ancho del carrusel al 60% del viewport width */
+    aspect-ratio: 16 / 9; /* Mantener relación de aspecto 16:9 */
+    margin: auto;
+    overflow: hidden; /* Oculta contenido que se sale del contenedor */
+    border: 2px solid #ccc; /* Añadir un borde para mejor visualización */
+    background-color: #000; /* Fondo negro para el carrusel */
+}
+
+.carousel-item {
+    display: none; /* Oculta todos los items por defecto */
+    height: 100%; /* Asegura que los items ocupen el 100% de la altura */
+}
+
+.carousel-item.active {
+    display: block; /* Muestra solo el item activo */
+}
+
+iframe {
+    width: 100%; /* Asegura que el iframe ocupe el 100% del contenedor */
+    height: 100%; /* Asegura que la altura del iframe mantenga la proporción del contenedor */
+}
+
+.prev,.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1; /* Asegura que los botones estén por encima de otros elementos */
+}
+
+.prev {
+    left: 10px; /* Botón anterior */
+}
+
+.next {
+    right: 10px; /* Botón siguiente */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Cambio de fondo en hover */
+}
+
+.form-padre {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9; /* Color de fondo claro */
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo del contenedor del formulario */
+.form-container {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Ancho para móviles */
+    max-width: 500px; /* Ancho máximo para escritorio */
+}
+
+.contact{
+    margin-top: 60px;
+}
+/* Estilo del título */
+h2 {
+    text-align: center;
+    color: #22B14C;
+    margin-bottom: 20px;
+}
+
+/* Estilo de cada grupo de formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilo de las etiquetas */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #22B14C;
+    font-weight: bold;
+}
+
+/* Estilo de los campos de entrada */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border: 1px solid #22B14C;
+    outline: none;
+}
+
+/* Estilo del botón de enviar */
+button[type="submit"] {
+    background-color: #22B14C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #1A8F3E; /* Color más oscuro al pasar el ratón */
+}
+
+/* Adaptaciones para dispositivos móviles */
+
+   

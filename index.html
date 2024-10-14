@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Barra de Navegación</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"> </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+            <div class="hero-image">
+                <div class="hero-text">
+                    <h1>Tesseract studio</h1>
+                    <p>Explore and discover</p>
+                    
+                </div>
+               
+            </div>
+            <section>
+                
+                <h2 class="about" id="about">About us</h2>
+                <div class="about-container">
+                    <div class="about-logo about-hijo">
+                        <div class="imglogo"></div>
+                    </div>
+                    <div class="about-description about-hijo">
+                        <p class="about-parrafo">Tesseract Studio is a company specializing in the development of video games and interactive products.
+                             It focuses on creating immersive and entertaining experiences using advanced technologies,
+                              combining innovative design with engaging narratives to deliver high-quality products. 
+                              Its multidisciplinary team consists of designers, programmers, artists,
+                               and interactivity specialists who collaborate to bring creative projects to life, both for entertainment and educational or commercial applications. 
+                               Tesseract Studio stands out for its commitment to innovation, creativity, and the use of cutting-edge development techniques to create interactive solutions that captivate its audience</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div     class="products-container">
+
+                    <div class="products-hijo">
+                        <p class="product-parrafo"> 
+                            Discover a fascinating world with our innovative augmented reality products and interactive experiences! Dive into unique adventures where technology comes to life and transforms the ordinary into the extraordinary. Explore our creative solutions that not only amaze but also captivate and connect in unforgettable ways. Don’t miss the chance to experience the magic of augmented reality like never before!</p>
+                    </div>
+                    <div class="products-hijo2">
+                        <div class="dragonimg"></div>
+                    </div>
+
+                   
+                </div>
+
+        <div class="padre-carousel">
+            <h2 class="products-title" id="products">Products</h2>
+            <div class="contenedor-carousel">
+                
+                <div class="carousel">
+                    <div class="carousel-item active">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/wp3tiiYFbtc?si=Ywu2ygbutvh4SIJT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Jz-nZFZMZsQ?si=vtDPulswCv0WmQ7d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+            </section>
+            <section class="form-padre" id="contact" >
+                <div class="form-container">
+                    <form action="https://formsubmit.co/rafaelromero235@gmail.com" method="POST">
+                        <h2 class="contact" >Contact</h2>
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group"> <!-- Asegurarse de que el botón esté en su propio contenedor -->
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <script src="js/script.js"></script>
+</body>
+</html>
