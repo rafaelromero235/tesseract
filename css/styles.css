@@ -195,8 +195,8 @@ body {
 }
 
 .hero-image {
-    background-image: url('../assets/heroimage.png'); /* Reemplaza esta URL con la ruta de tu imagen */
-    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    background-image: url('../assets/dragons.png'); /* Reemplaza esta URL con la ruta de tu imagen */
+    height: 160vh; /* Ocupa el 100% de la altura de la ventana */
     background-size: cover; /* La imagen cubre todo el área del div */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -280,7 +280,7 @@ body {
 
 
 .padre-carousel{
-    background-color: #f0f0f0;
+    background-color: rgb(36, 35, 35);
 }
 .contenedor-carousel{
     margin: 0; /* Eliminar márgenes por defecto */
@@ -288,7 +288,7 @@ body {
     justify-content: center; /* Centrar el carrusel horizontalmente */
     align-items: center; /* Centrar verticalmente */
     height: 100vh; /* Ocupa todo el alto de la vista */
-    background-color: #f0f0f0; /* Fondo claro para mejorar la visibilidad */
+    background-color: rgb(36, 35, 35); /* Fondo claro para mejorar la visibilidad */
 }
 
 .carousel {
@@ -345,7 +345,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f9f9f9; /* Color de fondo claro */
+    background-color: rgb(36, 35, 35); /* Color de fondo claro */
     font-family: Arial, sans-serif;
 }
 
